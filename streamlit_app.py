@@ -3,7 +3,7 @@ import tensorflow as tf
 
 @st.cache(allow_output_mutation=True)
 def load_model():
-  model=tf.keras.models.load_model('plant_classifier.hdf5')
+  model=tf.keras.models.load_model('C:/Users/Jemuel De Guzman/Desktop/JupyterFiles/ipynb_files/plant_classifier.hdf5')
   return model
 model=load_model()
 st.write("""
@@ -20,7 +20,7 @@ def import_and_predict(image_data,model):
     img_reshape=img[np.newaxis,...]
     prediction=model.predict(img_reshape)
     return prediction
-if file is None:
+if file is None:    
     st.text("Please upload an image file")
 else:
     image=Image.open(file)
